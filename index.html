@@ -1734,7 +1734,154 @@ html {
 }
 
 
+/* Teacher Profile Section Styles */
+.teacher-profile-section {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.tp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tp-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tp-badge {
+  background-color: #ff4757;
+  color: #fff;
+  padding: 5px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tp-header h2 {
+  font-size: 30px;
+  margin-top: 12px;
+  color: #f1f1f1;
+}
+
+/* Grid Layout for Desktop (Side-by-Side) */
+.tp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Standalone Image Slider Styles */
+.teacher-slider-container {
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 2px solid #333;
+  background-color: #000;
+  position: relative;
+}
+
+.teacher-slider-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.teacher-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.teacher-slide.active-t-slide {
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Content Box Styles */
+.tp-content-box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tp-content-box h3 {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0 0 5px 0;
+}
+
+.tp-subtitle {
+  font-size: 14px;
+  color: #ff4757;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.tp-qual-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tp-qual-list li {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+.tp-qual-list li span {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Tablet & Desktop Layout */
+@media (min-width: 900px) {
+  .tp-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+  }
+  
+  .teacher-slider-container {
+    height: 420px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .teacher-slider-container {
+    height: 280px;
+  }
+  
+  .tp-content-box {
+    padding: 20px;
+  }
+  
+  .tp-header h2 {
+    font-size: 24px;
+  }
+}
 
 
   </style>
@@ -1869,6 +2016,52 @@ html {
 </section>
 
 
+<!-- Teacher Profile Section with 4-Image Slider -->
+<section class="teacher-profile-section">
+  <div class="tp-container">
+    <div class="tp-header">
+      <span class="tp-badge">විශේෂිත ගුරු මඩුල්ල</span>
+      <h2>ප්‍රදේශයේ ඉහළම සුදුසුකම් සහිත ගුරුවරයා</h2>
+    </div>
+
+    <div class="tp-grid">
+      <!-- Left Column: 4 Images Slideshow -->
+      <div class="teacher-slider-container">
+        <div class="teacher-slider-wrapper">
+          <img src="s1.jpg" alt="Kosala Bandara Sir 1" class="teacher-slide active-t-slide">
+          <img src="s2.jpg" alt="Kosala Bandara Sir 2" class="teacher-slide">
+          <img src="s3.jpg" alt="Kosala Bandara Sir 3" class="teacher-slide">
+          <img src="s4.jpg" alt="Kosala Bandara Sir 4" class="teacher-slide">
+        </div>
+      </div>
+
+      <!-- Right Column: Qualifications & Bio -->
+      <div class="tp-content-box">
+        <h3>කොසල බණ්ඩාර</h3>
+        <p class="tp-subtitle">B.A. (Hons), M.A. (Kelaniya), Dip. in Counselling</p>
+        
+        <ul class="tp-qual-list">
+          <li>
+            
+            කැලණිය විශ්වවිද්‍යාලයේ ශාස්ත්‍රවේද ගෞරව උපාධිය නිම කර, එම විශ්වවිද්‍යාලයේම භූගෝල විද්‍යාව පිළිබඳ ශාස්ත්‍රපති පශ්චාත් උපාධිය (Master) නිම කර ඇත.
+          </li>
+          <li>
+             
+            මනෝවිද්‍යා උපදේශණය පිළිබඳ මානසික සෞඛ්‍ය පදනම මෙහෙයවන වසර දෙකක උසස් ඩිප්ලොමාව හදාරා ඇත.
+          </li>
+          <li>
+            
+            GIS (භූගෝලීය තොරතුරු පද්ධති) පිළිබඳ ප්‍රායෝගික දැනුමෙන් පරිපූර්ණයි.
+          </li>
+          <li>
+            
+            ප්‍රදේශයේ ඉහළම ප්‍රතිඵල සහිත, ඉහළම සුදුසුකම් සහිත භූගෝල විද්‍යා ගුරුතුමා වේ.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -2375,6 +2568,31 @@ function sendToWhatsApp(event) {
   window.open(whatsappUrl, '_blank');
 }
 
+
+
+//about sir
+document.addEventListener("DOMContentLoaded", function() {
+  let tCurrentIndex = 0;
+  const tSlides = document.querySelectorAll('.teacher-slide');
+
+  fnRotateTeacherSlides = function() {
+    if(tSlides.length === 0) return;
+    
+    // දැනට පෙන්වන පින්තූරයෙන් active class එක ඉවත් කිරීම
+    tSlides[tCurrentIndex].classList.remove('active-t-slide');
+    
+    // ඊළඟ පින්තූරයට යාම (4න් පසු නැවත පළමු පින්තූරයට පැමිණේ)
+    tCurrentIndex = (tCurrentIndex + 1) % tSlides.length;
+    
+    // නව පින්තූරයට active class එක එකතු කිරීම
+    tSlides[tCurrentIndex].classList.add('active-t-slide');
+  }
+
+  // සෑම තත්පර 3.5 කට වතාවක් පින්තූරය මාරු වේ (3500 milliseconds = 3.5 Seconds)
+  if(tSlides.length > 0) {
+    setInterval(fnRotateTeacherSlides, 3500);
+  }
+});
 
 </script>
 
